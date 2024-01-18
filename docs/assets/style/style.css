@@ -59,7 +59,7 @@ body {
 @media screen and (min-width: 1024px) and (orientation: landscape) {
   #body-index {
     max-width: 100vw;
-    max-height: 100dvh;
+    max-height: 100vh;
     overflow: hidden;
   }
 }
@@ -2621,4 +2621,5 @@ main {
   100% {
     background-position: 0% 50%;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
