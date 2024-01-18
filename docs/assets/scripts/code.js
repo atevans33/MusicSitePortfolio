@@ -13,6 +13,7 @@ var songLinks = ["docs/assets/audio/8pm.mp3",
 "docs/assets/audio/party.mp3", "docs/assets/audio/relapsing.mp3",
 "docs/assets/audio/garden.mp3"];
 var audio_index  = new Audio();
+audio_index.volume = 0;
 var m_breakpoint = 1024;//the breakpoint for mobile/tablet to desktop in px
 
 window.onload = function () {
