@@ -201,7 +201,11 @@ btn_prev.on('click', function() {
         bodyIndex.classList.remove('color-' + index);
         bodyIndex.classList.add('color-'+ newIndex);
         $("#album-title").html(albumTitles[parseInt(newIndex) - 1]);
-        audio.src = songLinks[parseInt(newIndex) - 1];
+        
+        if(record_slider.getAttribute('aria-expanded') === "true") {
+            audio.src = songLinks[parseInt(newIndex) - 1];
+        }
+        
         audio.play();
         index = newIndex;
 });
@@ -226,7 +230,11 @@ btn_next.on('click', function() {
     bodyIndex.classList.remove('color-' + index);
     bodyIndex.classList.add('color-'+ newIndex);
     $("#album-title").html(albumTitles[parseInt(newIndex) - 1]);
-    audio.src = songLinks[parseInt(newIndex) - 1];
+    
+    if(record_slider.getAttribute('aria-expanded') === "true") {
+        audio.src = songLinks[parseInt(newIndex) - 1];
+    }
+    
     audio.play();
     index = newIndex;
 });
@@ -627,7 +635,9 @@ function SliderExpand() {
 function SliderClose() {
     $("#music-btn").attr("aria-pressed", "false");
     document.getElementById('record-slider').setAttribute('aria-expanded', 'false');
-    
+    audio.pause();
+    audio.currentTime = 0;
+
     //if mobile and portrait
     if(window.innerWidth <= m_breakpoint) {
         $("#menu").removeClass("hide-menu");//bring back menu
@@ -657,4 +667,3 @@ function m_ToggleHamburgerVisible() {
         el.addClass("hide");
     }
 }
-
