@@ -13,7 +13,7 @@ var songLinks = ["docs/assets/audio/8pm.mp3",
 "docs/assets/audio/party.mp3", "docs/assets/audio/relapsing.mp3",
 "docs/assets/audio/garden.mp3"];
 var audio_index  = new Audio();
-audio_index.volume = 0;
+audio_index.pause();
 var m_breakpoint = 1024;//the breakpoint for mobile/tablet to desktop in px
 
 window.onload = function () {
@@ -131,10 +131,12 @@ mute_index.addEventListener('click',function() {
     if(mute_index.getAttribute('aria-pressed') === 'false') {
         mute_index.setAttribute('aria-pressed', 'true');
         audio_index.volume = 0;
+        audio_index.pause();
     }
     else {
         mute_index.setAttribute('aria-pressed', 'false');
         audio_index.volume = 1;
+        audio_index.play();
     }
 });
 
@@ -205,7 +207,9 @@ btn_prev.on('click', function() {
         
         if(record_slider.getAttribute('aria-expanded') === "true") {
             audio_index.src = songLinks[parseInt(newIndex) - 1];
-            audio_index.play();
+            if(document.getElementById('mute-index').getAttribute('aria-pressed') === 'false') {
+                audio_index.play();
+            }
         }
        
         index = newIndex;
@@ -234,7 +238,9 @@ btn_next.on('click', function() {
     
     if(record_slider.getAttribute('aria-expanded') === "true") {
         audio_index.src = songLinks[parseInt(newIndex) - 1];
-        audio_index.play();
+        if(document.getElementById('mute-index').getAttribute('aria-pressed') === 'false') {
+            audio_index.play();
+        }
     }
     
     index = newIndex;
@@ -569,9 +575,11 @@ function SliderExpand() {
         audio_index.src = songLinks[parseInt(index) - 1];
     }
     
-    setTimeout(() => {
-        audio_index.play();
-    }, 700);
+    if(document.getElementById('mute-index').getAttribute('aria-pressed') === 'false') {
+        setTimeout(() => {
+            audio_index.play();
+        }, 700);
+    }
 
     $("#music-btn").attr("aria-pressed", "true");
     document.getElementById('record-slider').setAttribute('aria-expanded', 'true');
