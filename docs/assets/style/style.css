@@ -66,10 +66,10 @@ body {
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .color-1 {
-    background: var(--gradient);
-    animation: gradient 15s ease infinite;
-    background-size: 400% 400%;
-    width: 100vw;
+    /* background: var(--gradient); */
+    /* animation: gradient 15s ease infinite;
+    background-size: 400% 400%; */
+    /* width: 100vw; */
     --gradient: linear-gradient(135deg, #f6f1ec, #e6d3cc,
     #bd8c7c, #c25e48);
   }
