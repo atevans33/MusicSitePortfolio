@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Home Page</title>
+    <link rel="stylesheet" href="/docs/assets/style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/2e1a3a050b.js" crossorigin="anonymous"></script>
+    <script defer src="/docs/assets/scripts/code.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Parisienne&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Archivo+Black&family=Laila:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Parisienne&family=Quicksand:wght@300;400;500;600;700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head> 
+<body id="body-index" record="0">
+    <div class="disable-anim-btn-wrapper">
+    <button id="anim-disable-btn" aria-pressed="false">Disable Animation</button>
+    </div>
+    <header>
+        <nav class="nav-nontraditional" id="nav-1" role="navigation">
+            <button class="hamburger-1 hamburger-index" aria-expanded="false" role="Menu button." id="menu">
+                <!--background for open nav on tablet/mobile-->
+                <div class="circle-background"></div>
+                <svg class="svg" viewbox="0 0 100 100">
+                    <line class="line top" x1="90" x2="10" y1="25" y2="25" stroke="black" stroke-width="10"
+                        stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                    <line class="line mid" x1="10" x2="90" y1="50" y2="50" stroke="black" stroke-width="10"
+                        stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0"></line>
+                    <line class="line bot" x1="10" x2="90" y1="75" y2="75" stroke="black" stroke-width="10"
+                        stroke-linecap="round" stroke-dasharray="80" stroke-dashoffset="0">
+                    </line>
+                </svg>
+            </button>
+            <ul class="nav-links">
+                <li class="nav-link"><a class="text" href="#">Shop<div class="underline" aria-hidden="true">Shop</div></a></li>
+                <li class="nav-link">
+                    <button class="text" aria-pressed="false" id="music-btn">Music<div class="underline"
+                    aria-hidden="true">Music</div>
+                    </button></li>
+                <li class="nav-link">
+                    <a class="text" href="#">About<div class="underline" aria-hidden="true">About</div></a>
+                </li>
+                <li class="nav-link">
+                    <a class="text" href="/flowetry.html">Flowetry<div class="underline" aria-hidden="true">
+                    Flowetry</div></a></li>
+                <li class="nav-button nav-link">
+                    <button class="subscribe-button text" aria-pressed="false" aria-label="subscribe to mailing list"
+                    aria-haspopup="dialog" id="subscribe-btn" aria-controls="record-slider">Subscribe<div class="underline" aria-hidden="true">Subscribe
+                    </div></button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
+        <div class="wrapper-slider">
+       <div id="record-slider" class="record-slider record-1" title="Music Slider" aria-expanded="false">
+        <div class="records-container rotate" id="records-container">
+            <!-- 8pm -->
+            <div class="record-element record-1" displayed="false" aria-label="Song 1 of 8">
+                <img class="img" src="/docs/assets/img/8pm.png" alt="Lighthouse Love Album">  
+            </div>
+            <!-- Godless Woman -->
+            <div class="record-element record-2" displayed="false" aria-label="Song 2 of 8">
+                <img class="img" src="/docs/assets/img/godless-woman.png" alt="Private Jet Album">
+            </div>
+            <!-- Flaming -->
+            <div class="record-element record-3" displayed="false" aria-label="Song 3 of 8">
+                <img class="img" src="/docs/assets/img/flaming.png" alt="Miniature People Album">
+            </div>
+            <!-- Memories -->
+            <div class="record-element record-4" displayed="false" aria-label="Song 4 of 8">
+                <img class="img" src="/docs/assets/img/memories.png" alt="Just Above Water Album">
+            </div>
+            <!-- Dust -->
+            <div class="record-element record-5" displayed="false" aria-label="Song 5 of 8">
+                <img class="img" src="/docs/assets/img/dust.png" alt="Sick Leave Album">
+            </div>
+            <!-- Party -->
+            <div class="record-element record-6" displayed="false" aria-label="Song 6 of 8">
+                <img class="img" src="/docs/assets/img/party.png" alt="End of the Tunnel Album">
+            </div>
+            <!-- Relapsing -->
+            <div class="record-element record-7" displayed="false" aria-label="Song 7 of 8">
+                <img class="img" src="/docs/assets/img/relapsing.png" alt="Spiffeon Album">
+            </div>
+            <!-- Garden -->
+            <div class="record-element record-8" displayed="false" aria-label="Song 8 of 8">
+                <img class="img" src="/docs/assets/img/garden.png" alt="Sunflower Album">
+            </div>
+        </div>
+        </div>
+        <!-- buttons for record slider -->
+        <div class="record-buttons" id="slider-controls" visible="false">
+            <div class="volume-exit-buttons">
+                <button class="btn exit" id="exit-slider" tabindex="0"><i class="fa-solid fa-xmark"></i></button>
+                <button class="btn mute1" aria-pressed="false" id="mute-index"><i class="fa-solid fa-music"></i>
+                <div class="box"><div class="slash"></div></div></button>
+            </div>
+            <div class="record-selection-wrapper">
+                <button class="btn btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
+                <p class="song-title" id="album-title" aria-live="polite">Lighthouse Love</p>
+                <button class="btn btn-next"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="record-content">
+                <ul title="Song links for Music Services" class="song-links">
+                    <li class="link link-1">
+                        <a href="#" aria-label="Song link to Spotify.">
+                            <i class="fa-brands fa-spotify"></i>
+                            <span class="text"> Spotify</span>
+                        </a>
+                    </li>
+                    <li class="link link-2">
+                        <a href="#" aria-label="Song link to Apple Music.">
+                            <i class="fa-brands fa-apple" aria-label="Apple"></i>
+                            <span class="text"> Music</span>
+                        </a>
+                    </li>
+                    <li class="link link-3">
+                        <a href="#" aria-label="Song link to Sondcloud.">
+                            <i class="fa-brands fa-soundcloud"></i>
+                            <span class="text"> SoundCloud</span>
+                        </a>
+                    </li>
+                    <li class="link link-4">
+                        <a href="#" aria-label="Song link to Youtube Music.">
+                            <i class="fa-brands fa-youtube" aria-label="YouTube"></i>
+                            <span class="text"> Music</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <audio id="audio-index">
+        <source src="/docs/assets/audio/8pm.mp3" type="audio/mpeg">
+      </audio>
+    <dialog class="subscribe-modal hide" role="dialog" id="dialog1" 
+    aria-labelledby="dialog1-label" aria-describedby="dialog1-desc"
+    aria-modal="true">
+    <div class="modal-backdrop"></div>
+        <div class="container">
+            <button class="exit-btn" id="exit-dialog1"><i class="fa-solid fa-xmark"></i><span class="hide-text">Exit Dialog.</span></button>
+            <h3 class="heading" id="dialog1-label">Join The Artist's Crew</h3>
+            <p class="desc" id="dialog1-desc">Subscribe to recieve updates from this artist</p>
+            <div class="wrapper">
+                <label class="lbl" for="email">First Name</label>
+                <input class="input" type="email" id="fname" name="First Name." placeholder="Please Enter First Name">
+            </div>
+            <div class="wrapper">
+            <label class="lbl" for="email">Last Name</label>
+            <input class="input" type="text" id="lname" name="Last Name." placeholder="Please Enter Last Name">
+            </div>
+            <div class="wrapper">
+            <label class="lbl" for="email">Email</label>
+            <input class="input" type="text" id="email" name="Email" placeholder="Please Enter Email">
+            </div>
+            <button class="submit-button btn" type="submit">Subscribe</button>
+        </div>
+    </dialog>
+    </main>
+    <footer class="footer" id="footer">
+        <div class="logo-container">
+            <!--<img src="/img/logo/generic-logo.png" height="auto" width="100%">-->
+        </div>
+        <div class="socials-wrapper">
+            <h3 class="heading">Find more of this music artist</h3>
+        <ul class="social-links">
+            <li class="link left" aria-label="Find mroe music on Apple."><a href="#"><i class="fa-brands fa-apple"></i></a></li>
+            <li class="link" aria-label="Find more music on Spotify."><a href="#"><i class="fa-brands fa-spotify"></i></a></li>
+            <li class="link" aria-label="Follow us on Instagram."><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="link" aria-label="Find more music on YouTube."><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+            <li class="link" aria-label="Join our discord server."><a href="#"><i class="fa-brands fa-discord"></i></a></li>
+            <li class="link right" aria-label="Follow us on TikTok"><a href="#"><i class="fa-brands fa-tiktok"></i></a></li>
+        </ul>
+    </div>
+    </footer>
+</body>
+</html>
