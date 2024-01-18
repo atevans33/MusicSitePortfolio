@@ -7,11 +7,11 @@ var oldVolume;
 //album title names
 var albumTitles = ["8 pm", "Godless Woman", "Flaming Lies", 
     "Memories", "Dust", "Party", "Relapsing", "Garden"];
-var songLinks = ["/docs/assets/audio/8pm.mp3",
- "/docs/assets/audio/godless-woman.mp3","/docs/assets/audio/flaming-lies.mp3",
-"/docs/assets/audio/memories.mp3", "/docs/assets/audio/dust.mp3",
-"/docs/assets/audio/party.mp3", "/docs/assets/audio/relapsing.mp3",
-"/docs/assets/audio/garden.mp3"];
+var songLinks = ["docs/assets/audio/8pm.mp3",
+ "docs/assets/audio/godless-woman.mp3","docs/assets/audio/flaming-lies.mp3",
+"docs/assets/audio/memories.mp3", "docs/assets/audio/dust.mp3",
+"docs/assets/audio/party.mp3", "docs/assets/audio/relapsing.mp3",
+"docs/assets/audio/garden.mp3"];
 var audio  = new Audio();
 var m_breakpoint = 1024;//the breakpoint for mobile/tablet to desktop in px
 
@@ -511,7 +511,13 @@ function LoadSubtitles(audio, song) {
 }
 
 function SliderExpand() {
-    audio.src = "/docs/assets/audio/8pm.mp3"
+    if(index === 1 ) {
+        audio.src = "docs/assets/audio/8pm.mp3"
+    }
+    else {
+        audio.src = songLinks[parseInt(index) - 1];
+    }
+    
     setTimeout(() => {
         audio.play();
     }, 700);
