@@ -204,9 +204,9 @@ btn_prev.on('click', function() {
         
         if(record_slider.getAttribute('aria-expanded') === "true") {
             audio_index.src = songLinks[parseInt(newIndex) - 1];
+            audio_index.play();
         }
-        
-        audio_index.play();
+       
         index = newIndex;
 });
 
@@ -233,9 +233,9 @@ btn_next.on('click', function() {
     
     if(record_slider.getAttribute('aria-expanded') === "true") {
         audio_index.src = songLinks[parseInt(newIndex) - 1];
+        audio_index.play();
     }
-
-    audio_index.play();
+    
     index = newIndex;
 });
 
@@ -684,7 +684,6 @@ function SliderClose() {
         $("#menu").removeClass("hide-menu");//bring back menu
         return;
     }
-
     
     $("#records-container").addClass("rotate");
     $("#slider-controls").attr("visible", "false");
@@ -704,4 +703,3 @@ function m_ToggleHamburgerVisible() {
         el.addClass("hide");
     }
 }
-
