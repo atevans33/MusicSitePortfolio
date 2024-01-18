@@ -60,14 +60,13 @@ body {
     max-width: 100vw;
     min-height: 100lvh;
     max-height: min-content;
-    overflow: hidden;
   }
 }
 @media screen and (min-width: 1024px) and (orientation: landscape) {
   body{
     max-width: 100vw;
-    height: 100vh;
-    height: 100svh;
+    max-height: 100vh;
+    max-height: 100svh;
     overflow: hidden;
   }
 }
@@ -1273,7 +1272,7 @@ main {
     left: 0;
     width: 100svw;
     height: 100vh;
-    height: 100svh;
+    height: 100lvh;
     background: none;
     overflow: hidden;
     display: flex;
@@ -1951,6 +1950,7 @@ main {
 }
 @media screen and (max-width: 1024px) and (orientation: portrait) {
   .record-slider[aria-expanded=true] + .record-buttons .volume-exit-buttons {
+    position: relative;
     visibility: visible;
     display: flex;
     flex-direction: row;
