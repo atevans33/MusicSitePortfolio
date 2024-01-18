@@ -59,7 +59,8 @@ body {
 @media screen and (min-width: 1024px) and (orientation: landscape) {
   #body-index {
     max-width: 100vw;
-    max-height: 100vh;
+    height: 100vh;
+    height: 100lvh;
     overflow: hidden;
   }
 }
