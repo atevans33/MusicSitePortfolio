@@ -245,10 +245,46 @@ $("#subscribe-btn").on("click", function() {
     if (btn.attr("aria-pressed") === "false") {
         btn.attr("aria-pressed", "true");
         $("#dialog1").removeClass("hide");
+
+        if(window.innerWidth < 1025 && window.innerWidth < window.innerHeight) {
+            document.getElementById('record-slider').classList.add('hide');
+        }
     }
     else {
         btn.attr("aria-pressed", "false");
         $("#dialog1").addClass("hide");
+        
+        
+        if(window.innerWidth < 1025 && window.innerWidth < window.innerHeight) {
+            document.getElementById('record-slider').classList.add('remove');
+        }
+    }
+
+    //if porttait(mobile/tablet), close nav menu
+    if(window.innerWidth < window.innerHeight) {
+        $("#menu").attr("aria-expanded", "false");
+    }
+});
+
+//open about dialog
+$("#about-btn").on("click", function() {
+    var btn = $("#about-btn");
+    if (btn.attr("aria-pressed") === "false") {
+        btn.attr("aria-pressed", "true");
+        $("#dialog2").removeClass("hide");
+        
+        if(window.innerWidth < 1025 && window.innerWidth < window.innerHeight) {
+            document.getElementById('record-slider').classList.add('hide');
+        }
+    }
+    else {
+        btn.attr("aria-pressed", "false");
+        $("#dialog2").addClass("hide");
+        
+        
+        if(window.innerWidth < 1025 && window.innerWidth < window.innerHeight) {
+            document.getElementById('record-slider').classList.remove('hide');
+        }
     }
 
     //if porttait(mobile/tablet), close nav menu
@@ -261,6 +297,14 @@ $("#subscribe-btn").on("click", function() {
 $("#exit-dialog1").on("click", function() {
     $("#subscribe-btn").attr("aria-pressed", "false");
     $("#dialog1").addClass("hide");
+    document.getElementById('record-slider').classList.remove('hide');
+});
+
+//exit dialog2
+$("#exit-dialog2").on("click", function() {
+    $("#about-btn").attr("aria-pressed", "false");
+    $("#dialog2").addClass("hide");
+    document.getElementById('record-slider').classList.remove('hide');
 });
 
 /* 
@@ -303,8 +347,6 @@ function ToggleSongButtons(button) {
             $(buttons[i]).removeAttr("disabled")           
         }
     }
-    
-    
 }
 
 /* 
@@ -540,7 +582,6 @@ function SliderExpand() {
     //if mobile
     if(window.innerWidth < 1025 && window.innerWidth < window.innerHeight) {
         $('#menu').attr("aria-expanded", "false");
-        console.log('skipped, kinda');
         setTimeout(function() {
             $('#menu').addClass("hide-menu");
         }, 600);
