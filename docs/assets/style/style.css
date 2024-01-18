@@ -1230,6 +1230,26 @@ main {
   }
 }
 
+.dialog2 .text {
+  max-width: 80%;
+  text-align: center;
+  line-height: 180%;
+}
+
+.dialog2 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+/* hide record slider mobile */
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+    .record-slider.hide {
+    top: 50vh;
+    transition: top 500ms ease-in-out 500ms;
+  }
+}
 
 .record-slider {
   --slider-width: calc((var(--record-size) * 3));
@@ -1252,6 +1272,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: top 500ms ease-in-out 500ms;
   }
 }
 @media screen and (max-height: 550px) and (orientation: landscape) {
@@ -1974,7 +1995,7 @@ main {
   width: 4px;
   height: 2.5rem;
   transform: rotate(-70deg);
-  background-color: black;
+  background-color: #0d0d0d;
   transition: color 200ms ease-out;
 }
 @media screen and (min-width: 1025px) and (orientation: landscape) {
@@ -2279,7 +2300,7 @@ main {
     background-color: rgba(0, 0, 0, 0);
   }
 }
-.subscribe-modal {
+.modal {
   position: fixed;
   height: 100vh;
   height: 100svh;
@@ -2296,11 +2317,11 @@ main {
 }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
-  .subscribe-modal {
+  .modal {
     align-items: end;
   }
 }
-.subscribe-modal .container {
+.modal .container {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -2312,7 +2333,7 @@ main {
 }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
-  .subscribe-modal .container {
+  .modal .container {
     min-width: 100vw;
     border-radius: 0;
     border-top-right-radius: 5rem;
@@ -2324,7 +2345,7 @@ main {
     bottom: -100%;
   }
 }
-.subscribe-modal .container .exit-btn {
+.modal .container .exit-btn {
   border: 0;
   background: none;
   position: absolute;
@@ -2336,23 +2357,23 @@ main {
 }
 
 @media screen and (orientation: portrait) {
-  .subscribe-modal .container .exit-btn {
+  .modal .container .exit-btn {
     left: 2rem;
   }
 }
-.subscribe-modal .wrapper {
+.modal .wrapper {
   display: flex;
   flex-direction: column;
 }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
-  .subscribe-modal .wrapper {
+  .modal .wrapper {
     width: 70%;
     margin-left: 0 auto 0 auto;
     align-self: center;
   }
 }
-.subscribe-modal .container .heading {
+.modal .container .heading {
   font-weight: 600;
   font-size: 1.7rem;
   display: flex;
@@ -2362,7 +2383,7 @@ main {
   color: #0d0d0d;
 }
 
-.subscribe-modal .container .desc {
+.modal .container .desc {
   font-size: 1.1rem;
   max-width: 50vw;
   text-align: center;
@@ -2371,19 +2392,19 @@ main {
 }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
-  .subscribe-modal .container .desc {
+  .modal .container .desc {
     width: 70%;
     align-self: center;
   }
 }
-.subscribe-modal .container .lbl {
+.modal .container .lbl {
   font-weight: 600;
   font-size: 1.2rem;
   margin: 0.5rem 0 0.5rem 0;
   color: #0d0d0d;
 }
 
-.subscribe-modal .container .input {
+.modal .container .input {
   border-radius: 1rem;
   border: 1px rgb(97, 97, 97) solid;
   height: 2rem;
@@ -2392,17 +2413,17 @@ main {
   background-color: rgb(198, 198, 198);
 }
 
-.subscribe-modal .container .input::-moz-placeholder {
+.modal .container .input::-moz-placeholder {
   color: #0d0d0d;
   font-size: 0.8rem;
 }
 
-.subscribe-modal .container .input::placeholder {
+.modal .container .input::placeholder {
   color: #0d0d0d;
   font-size: 0.8rem;
 }
 
-.subscribe-modal .container .btn {
+.modal .container .btn {
   margin-top: 0.5rem;
   height: 2rem;
   border-radius: 1rem;
@@ -2414,7 +2435,7 @@ main {
 }
 
 @media screen and (max-width: 1024px) and (orientation: portrait) {
-  .subscribe-modal .container .btn {
+  .modal .container .btn {
     width: 70%;
     align-self: center;
     margin-top: 1rem;
