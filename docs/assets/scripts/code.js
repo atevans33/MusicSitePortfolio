@@ -17,6 +17,8 @@ audio_index.pause();
 var m_breakpoint = 1024;//the breakpoint for mobile/tablet to desktop in px
 
 window.onload = function () {
+    document.getElementById('body-index').height = window.outerHeight;
+
     //flowtry page scripts
     var audio = document.getElementById("audio");
 
