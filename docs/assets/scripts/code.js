@@ -713,3 +713,8 @@ function m_ToggleHamburgerVisible() {
     }
 }
 
+window.addEventListener('load', function() {
+    if(window.innerWidth > window.innerHeight && (window.innerWidth / window.innerHeight) > 1.9) {
+        document.documentElement.style.setProperty('--record-size', '23vw');
+    }
+})
