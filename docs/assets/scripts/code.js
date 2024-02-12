@@ -714,7 +714,8 @@ function m_ToggleHamburgerVisible() {
 }
 
 window.addEventListener('load', function() {
-    if(window.innerWidth > window.innerHeight && (window.innerWidth / window.innerHeight) > 1.9) {
+    if(window.innerWidth > window.innerHeight && (window.innerWidth / window.innerHeight) > 1.85) {
         document.documentElement.style.setProperty('--record-size', '23vw');
+        console.log('adjusted record size');
     }
 })
